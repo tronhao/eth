@@ -22,7 +22,7 @@
 ### 实际运作图
 	9A 10A 一会儿就出了
 	我的电脑4060 1秒135MH =（4亿个地址 / 每秒）
-<img src="https://github.com/tronhao/trxhao/blob/main/gpu2.png">
+<img src="https://github.com/tronhao/eth/blob/main/ethgpu.png">
 ---
 
 ## 快速开始
@@ -77,5 +77,6 @@
   - OpenCL：OpenCL 1.2+（NVIDIA/AMD/Intel 驱动）  
   - CPU：无额外运行时依赖
 - **加密实现**：内置 secp256k1 包装与轻量 Keccak；可替换为系统库
+
 
 ---
