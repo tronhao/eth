@@ -1,0 +1,40 @@
+﻿## ethgpu.exe-ether
+
+- 先查看显卡兼容性运行"GPU环境检测"。
+- `windows` 下可直接运行 `start.bat` 启动程式。
+- 请参考项目 `README.md` 参数介绍，自行编辑 `start.bat` 配置软件运行参数。
+- 如果提示 `vcruntime140_1.dll` 相关异常，请安装 `visual studio` 应用程序，官方下载链接：[https://visualstudio.microsoft.com/zh-hans/vs/](https://visualstudio.microsoft.com/zh-hans/vs/)
+- 关于软件运行速度，以及诸如跑什么规则的地址需要多长时间等问题，请阅读项目主页 `README.md` 速度章节说明
+
+## 命令介绍
+
+```bash
+Usage: ./ethgpu.exe [OPTIONS]
+
+  Help:
+    --help              Show help information
+
+  Modes with arguments:
+    --matching          Matching input, file or single address.
+
+  Matching configuration:
+    --prefix-count      Minimum number of prefix matches, default 0
+    --suffix-count      Minimum number of suffix matches, default 6
+    --quit-count        Exit the program when the generated number is greater than, default 0
+
+  Device control:
+    --skip              Skip GPU device given by index
+
+  Output control:
+    --output            The file to output the results to
+    --post              The url to post the results to
+
+例子:
+
+  ./ethgpu.exe --matching ethgpu.exe.txt
+  ./ethgpu.exe --matching ethgpu.exe.txt --skip 1
+  ./ethgpu.exe --matching ethgpu.exe.txt --output ethok.txt
+  ./ethgpu.exe --matching ethgpu.exe.txt --post http://127.0.0.1:7001/api
+  ./ethgpu.exe --matching ethgpu.exe.txt --prefix-count 1 --suffix-count 8
+  ./ethgpu.exe --matching ethgpu.exe.txt --prefix-count 4 --suffix-count 6 --quit-count 1
+  ./ethgpu.exe --matching 0x59c85dc411601f76cb2fc63118567a09e32ff028 --prefix-count 4 --suffix-count 6 --quit-count 1
